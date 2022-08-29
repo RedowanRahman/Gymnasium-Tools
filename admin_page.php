@@ -34,7 +34,7 @@ if(!isset($admin_id)){
 
 <section class="dashboard">
 
-   <h1 class="title">DashBoard</h1>
+   <h1 class="title">Home/DashBoard</h1>
 
    <div class="box-container">
 
@@ -74,7 +74,8 @@ if(!isset($admin_id)){
             $number_of_orders = mysqli_num_rows($select_orders);
          ?>
          <h3><?php echo $number_of_orders; ?></h3>
-         <p>Order Placed</p>
+         
+         <p><a href="admin_orders.php">Order Placed</a></p>
       </div>
 
       <div class="box">
@@ -83,7 +84,7 @@ if(!isset($admin_id)){
             $number_of_products = mysqli_num_rows($select_products);
          ?>
          <h3><?php echo $number_of_products; ?></h3>
-         <p>Products Added</p>
+         <p><a href="admin_products.php">Products Added</a></p>
       </div>
 
       <div class="box">
@@ -92,7 +93,7 @@ if(!isset($admin_id)){
             $number_of_users = mysqli_num_rows($select_users);
          ?>
          <h3><?php echo $number_of_users; ?></h3>
-         <p>Normal Users</p>
+         <p><a href="admin_users.php">Normal Users</a></p>
       </div>
 
       <div class="box">
@@ -101,7 +102,7 @@ if(!isset($admin_id)){
             $number_of_admins = mysqli_num_rows($select_admins);
          ?>
          <h3><?php echo $number_of_admins; ?></h3>
-         <p>Admin Users</p>
+         <p><a href="admin_users.php">Admin Users</a></p>
       </div>
 
       <div class="box">
@@ -110,16 +111,18 @@ if(!isset($admin_id)){
             $number_of_account = mysqli_num_rows($select_account);
          ?>
          <h3><?php echo $number_of_account; ?></h3>
-         <p>Total Accounts</p>
+         <p><a href="admin_users.php">Total Accounts</a></p>
       </div>
 
       <div class="box">
+         
          <?php 
             $select_messages = mysqli_query($conn, "SELECT * FROM  message ") or die('query failed');
             $number_of_messages = mysqli_num_rows($select_messages);
          ?>
          <h3><?php echo $number_of_messages; ?></h3>
-         <p>New Messages</p>
+         <p><a href="admin_contacts.php">New Messages</p>
+
       </div>
 
    </div>
